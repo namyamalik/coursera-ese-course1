@@ -32,9 +32,10 @@ int main() {
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
   	// call some functions on array 
-	print_array(test, SIZE);
-  	print_statistics(test, SIZE);
-  	sort_array(test, SIZE);
+	print_array(test, SIZE); // print original array
+  	print_statistics(test, SIZE); // print stats of original array
+  	unsigned char* sorted_array = sort_array(test, SIZE); // sort array
+	print_array(sorted_array, SIZE); // print sorted array
 
   	return 0;
 }
@@ -60,7 +61,9 @@ void print_array(unsigned char* data_array, unsigned int array_size) {
 
 // return median value of array elements
 int find_median(unsigned char* data_array, unsigned int array_size) {
-  	if (array_size % 2 == 0) {
+  	sort_array(data_array, array_size); // sort array so that correct median is calculated
+
+	if (array_size % 2 == 0) {
     	int left = data_array[array_size / 2];
     	int right = data_array[(array_size / 2) - 1];
     	int median = (left + right) / 2;
@@ -104,8 +107,8 @@ int find_minimum(unsigned char* data_array, unsigned int array_size) {
   	return min;
 }
 
-// sort array in decreasing order and print the sorted array
-void sort_array(unsigned char* data_array, unsigned int array_size) {
+// sort array in decreasing order
+unsigned char* sort_array(unsigned char* data_array, unsigned int array_size) {
   	printf("\nSorting array in decreasing order...\n");
 	for (int i = 0; i < array_size; i++) {
 		for (int j = i + 1; j < array_size; j++) {	
@@ -116,5 +119,5 @@ void sort_array(unsigned char* data_array, unsigned int array_size) {
 			}
   		}
 	}
-	print_array(data_array, array_size);
+	return data_array;
 }
