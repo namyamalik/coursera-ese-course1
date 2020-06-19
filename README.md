@@ -10,7 +10,7 @@ This is my submission for the Week 1 Assignment for the *Introduction to Embedde
 * `stats.h`: corresponding header file
 
 ### Compile
-`gcc stats.c` or `mygcc stats.c`  
+`gcc stats.c`  
 
 This produces an exectuable (`a.out`)
 
