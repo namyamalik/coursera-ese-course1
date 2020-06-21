@@ -1,2 +1,7 @@
+*.i
+*.d
+*.asm
+*.o
 *.out
+*.map
 core
