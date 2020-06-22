@@ -25,7 +25,7 @@ ______________________________________________
 #### Contents
 * `msp432p401r.lds`: linker file used for linking
 * `src` folder: contains five source files (.c)
-	* Makefile
+	* `Makefile`
 	* `sources.mk`
 	* `main.c`
 	* `memory.c`
