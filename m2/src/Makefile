@@ -21,7 +21,7 @@
 #      <FILE>.asm - Builds <FILE>.asm assembly file
 #      build - Builds and links all source files and displays size 
 #      all -  Same as build
-#      compile_all -Compiles all object files without linking
+#      compile_all - Compiles all object files without linking
 #      clean - Removes all generated files
 #
 #
@@ -106,4 +106,3 @@ compile_all: $(OBJS)
 clean:
 	rm -f *.i *.o *.asm *.d \
 		  *.out *.map
-
