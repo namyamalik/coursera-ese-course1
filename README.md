@@ -58,4 +58,19 @@ The host code can run natively on your system and should output a string "aXy72_
 * Ensure that the `arm-none-eabi` cross-compiler toolchain is installed and matches the location specified in Makefile. Installation instructions can be found here: https://developers.hardwario.com/firmware/toolchain-setup#setup-on-generic-linux and https://shantamraj.wordpress.com/2017/12/03/setting-up-arm-toolchain-on-ubuntu/ and https://github.com/armmbed/homebrew-formulae
 * Run `make clean` before a new build to avoid errors or corrupt `.o` files
 ______________________________________________
+### WEEK 2
 
+#### Contents
+* `main.c`: main file to work with
+* `misc.c`: declares some data and defines some functions
+* `misc.h`: contains function declarations and macros
+* `msp432p401r.lds`: linker file for the msp432
+
+#### Compile/assemble source files without linking
+`arm-none-eabi-gcc main.c misc.c`
+
+#### Link together following the linker script specs and output map file with the link results
+`arm-none-eabi-ld -Map output.map -T msp432p401r.lds -N -o output.elf main.o misc.o`
+
+#### Clean Up
+`rm -rf *.o *.map`
