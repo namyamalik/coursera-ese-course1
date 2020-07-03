@@ -55,10 +55,13 @@ Note that upon completion of a build, there is also a build report of code size 
 The host code can run natively on your system and should output a string "aXy72_L+R". The cortex build will not be able to run natively, since it is meant to run on a separate target. If the cortex build exectuable is run, it will produce an error: "cannot execute binary file: Exec format error".
 
 #### Miscellaneous
-* Ensure that the `arm-none-eabi` cross-compiler toolchain is installed and matches the location specified in Makefile. Installation instructions can be found here: https://developers.hardwario.com/firmware/toolchain-setup#setup-on-generic-linux and https://shantamraj.wordpress.com/2017/12/03/setting-up-arm-toolchain-on-ubuntu/ and https://github.com/armmbed/homebrew-formulae
+* Ensure that the `arm-none-eabi` cross-compiler toolchain is installed and the install location of the arm-none-eabi-* executables are included in the $PATH variable (in .bashrc). Installation instructions can be found here: 
+	* https://developers.hardwario.com/firmware/toolchain-setup#setup-on-generic-linux
+	* https://shantamraj.wordpress.com/2017/12/03/setting-up-arm-toolchain-on-ubuntu/
+	* https://github.com/armmbed/homebrew-formulae
 * Run `make clean` before a new build to avoid errors or corrupt `.o` files
 ______________________________________________
-### WEEK 2
+### WEEK 3
 
 #### Contents
 * `main.c`: main file to work with

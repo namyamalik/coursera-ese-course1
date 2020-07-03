@@ -49,10 +49,10 @@ ifeq ($(PLATFORM), MSP432)
     SPECS = nosys.specs
 
 	# Compiler Flags and Defines
-    CC = ~/.local/opt/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gcc
-    LD = ~/.local/opt/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-ld
-    DUMP = ~/.local/opt/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-objdump
-    SIZE = ~/.local/opt/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-size -Btx
+    CC = arm-none-eabi-gcc
+    LD = arm-none-eabi-ld
+    DUMP = arm-none-eabi-objdump
+    SIZE = arm-none-eabi-size -Btx
     CFLAGS = -mcpu=$(CPU) -m$(ARCH) --specs=$(SPECS) -DMSP432
 
 endif

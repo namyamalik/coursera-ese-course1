@@ -18,6 +18,7 @@
 
 #include <stdio.h>
 #include "stats.h"
+#include "platform.h"
 
 /* Size of the Data Set */
 #define SIZE (40)
@@ -50,13 +51,15 @@ void print_statistics(unsigned char* data_array, unsigned int array_size) {
   	printf("Min: %d; Max: %d; Mean: %d; Median: %d\n", min, max, mean, median);
 }
 
-// print out array elements
+// print out array elements if the VERBOSE flag is enabled in makefile
 void print_array(unsigned char* data_array, unsigned int array_size) {
-  	printf("\nPrinting array: [ ");
-  	for (int i = 0; i < array_size; i++) {
-    	printf("%d ", data_array[i]);
-  	}
-  	printf("]\n");
+  	#ifdef VERBOSE	
+		printf("\nPrinting array: [ ");
+  		for (int i = 0; i < array_size; i++) {
+    		printf("%d ", data_array[i]);
+  		}
+  		printf("]\n");
+	#endif
 }
 
 // return median value of array elements
