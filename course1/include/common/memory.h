@@ -90,4 +90,96 @@ void set_all(char * ptr, char value, unsigned int size);
  */
 void clear_all(char * ptr, unsigned int size);
 
+/**
+ * @brief Moves data of a certain length from source to destination
+ *
+ * Given two pointers to an 8-bit int array, this will move a block
+ * of data (which is of a certain length) from one pointer to the other. 
+ *
+ * @param src Pointer to 8-bit int array
+ * @param dst Pointer to 8-bit int array
+ * @param length Number of elements to move
+ *
+ * @return Pointer to 8-bit int array
+ */
+uint8_t * my_memmove(uint8_t * src, uint8_t * dst, size_t length);
+
+/**
+ * @brief Copies data of a certain length from source to destination
+ *
+ * Given two pointers to an 8-bit int array, this will copy a block
+ * of data (which is of a certain length) from one pointer to the other.
+ *
+ * @param src Pointer to 8-bit int array
+ * @param dst Pointer to 8-bit int array
+ * @param length Number of elements to copy
+ *
+ * @return Pointer to 8-bit int array
+ */
+uint8_t * my_memcopy(uint8_t * src, uint8_t * dst, size_t length);
+
+/**
+ * @brief Sets the data in a source memory location to a given value
+ *
+ * Given a pointer to an 8-bit int source array, this will set the data 
+ * of a certain length to a given value.
+ *
+ * @param src Pointer to 8-bit int source array
+ * @param length Number of elements to change
+ * @param value 8-bit int to change the data to
+ *
+ * @return Pointer to 8-bit int array
+ */
+uint8_t * my_memset(uint8_t * src, size_t length, uint8_t value);
+
+/**
+ * @brief Sets the data in a source memory location to zero
+ *
+ * Given a pointer to an 8-bit int source array, this will set the data
+ * of a certain length to zero.
+ *
+ * @param src Pointer to 8-bit int source array
+ * @param length Number of elements to set
+ *
+ * @return Pointer to 8-bit int array
+ */
+uint8_t * my_memzero(uint8_t * src, size_t length);
+
+/**
+ * @brief Reverses the data in a source memory location
+ *
+ * Given a pointer to an 8-bit int source array, this will reverse the 
+ * data of a certain length.
+ *
+ * @param src Pointer to 8-bit int source array
+ * @param length Number of elements to reverse
+ *
+ * @return Pointer to 8-bit int array
+ */
+uint8_t * my_reverse(uint8_t * src, size_t length);
+
+/**
+ * @brief Dynamically allocates memory to a pointer
+ *
+ * Given the length of bytes to allocate, this will allocate the
+ * memory to a pointer that points to an array of ints.
+ *
+ * @param length Number of bytes to allocate
+ *
+ * @return Pointer to 32-bit int array
+ */
+int32_t * reserve_words(size_t length);
+
+/**
+ * @brief Deallocates memory to a pointer
+ *
+ * Given a pointer to an 32-bit int source array, this will deallocate the
+ * memory of the data array.
+ *
+ * @param src Pointer to 8-bit int source array
+ *
+ * @return none
+ */
+void free_words(int32_t * src);
+
 #endif /* __MEMORY_H__ */
