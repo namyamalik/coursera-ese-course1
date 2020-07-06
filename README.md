@@ -42,9 +42,12 @@ ______________________________________________
 I only edited the `Makefile` and `sources.mk` for this assignment.
 
 #### Compile
+Navigate to directory that contains `Makefile`  
+
 `make build PLATFORM=HOST` for host platform target  
 or  
 `make build PLATFORM=MSP432` for MSP432 platform target  
+
 Either compilation will produce an executable named `c1m2.out`.
 
 Note that upon completion of a build, there is also a build report of code size (using the size tool) that is outputted.
@@ -114,9 +117,12 @@ ______________________________________________
 		* `core_cmSimd.h`
 
 #### Compile
-`make build PLATFORM=HOST` for host platform target
-or
-`make build PLATFORM=MSP432` for MSP432 platform target
+Navigate to directory that contains `Makefile`  
+
+`make build PLATFORM=HOST` for host platform target  
+or  
+`make build PLATFORM=MSP432` for MSP432 platform target  
+
 Either compilation will produce an executable named `target.out`.
 
 Note that upon completion of a build, there is also a build report of code size (using the size tool) that is outputted.
