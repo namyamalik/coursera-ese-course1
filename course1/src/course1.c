@@ -48,7 +48,7 @@ int8_t test_data1() {
 
   if ( value != num )
   {
-    return TEST_ERROR;
+	return TEST_ERROR;
   }
   return TEST_NO_ERROR;
 }
@@ -77,7 +77,7 @@ int8_t test_data2() {
 
   if ( value != num )
   {
-    return TEST_ERROR;
+	return TEST_ERROR;
   }
   return TEST_NO_ERROR;
 }
@@ -313,7 +313,7 @@ int8_t test_reverse()
   {
     if (set[i] != copy[MEM_SET_SIZE_B - i - 1])
     {
-      ret = TEST_ERROR;
+		ret = TEST_ERROR;
     }
   }
 

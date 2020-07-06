@@ -41,14 +41,14 @@ include sources.mk
 ifeq ($(PLATFORM), MSP432)
 
 	#Platform Specific Flags
-    LINKER_FILE = -T ../msp432p401r.lds
+    LINKER_FILE = -T ./msp432p401r.lds
 
 	# Architectures Specific Flags
     CPU = cortex-m4
     ARCH = thumb
     SPECS = nosys.specs
 
-	# Compiler Time Switches
+	# Compiler Time Switches (comment to turn off)
     COURSE1=-DCOURSE1
     VERBOSE=-DVERBOSE
 	
@@ -63,13 +63,13 @@ endif
 
 ifeq ($(PLATFORM), HOST)
 
-	# Compiler Time Switches
+	# Compiler Time Switches (comment to turn off)
     COURSE1=-DCOURSE1
     VERBOSE=-DVERBOSE
 
 	# Compiler flags and defines
     CC = gcc
-    CFLAGS = -DHOST $(COURSE) $(VERBOSE)
+    CFLAGS = -DHOST $(COURSE1) $(VERBOSE)
     LD = -ld
     DUMP = objdump
     SIZE = size -Btx
@@ -79,11 +79,11 @@ endif
 GEN_FLAGS = -Wall -Werror -g -O0 -std=c99
 LDFLAGS = -Wl,-Map=$(TARGET).map $(LINKER_FILE)
 CPPFLAGS = $(INCLUDES) $(GEN_FLAGS)
-TARGET = c1m2
+TARGET = target
 
 OBJS = $(SOURCES:.c=.o)
 
-%.o : %.c
+./src/%.o : %.c
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $<
 
 %.i : %.c
@@ -114,3 +114,5 @@ compile_all: $(OBJS)
 clean:
 	rm -f *.i *.o *.asm *.d \
 		  *.out *.map
+	rm -f ./src/*.i ./src/*.o ./src/*.asm ./src/*.d \
+			./src/*.out ./src/*.map

@@ -18,6 +18,8 @@
  * @date July 2020
  *
  */
+
+#include <stdint.h>
 #include "platform.h"
 #include "memory.h"
 #include "course1.h"
@@ -29,7 +31,7 @@ char buffer[MAX_LENGTH];
 int main(void) {
 	#ifdef COURSE1
 		course1();
-	#endif
+	#endif	
   	return 0;
 }
 

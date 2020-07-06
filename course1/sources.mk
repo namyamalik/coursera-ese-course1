@@ -11,11 +11,11 @@
 
 ifeq ($(PLATFORM), HOST)
 
-SOURCES =   main.c \
-			memory.c \
-			stats.c \
-			data.c \
-			course1.c
+SOURCES =   ./src/main.c \
+			./src/memory.c \
+			./src/stats.c \
+			./src/data.c \
+			./src/course1.c
 
 INCLUDES =  -I./include/common \
 			-I./src/
@@ -25,14 +25,14 @@ endif
 
 ifeq ($(PLATFORM), MSP432)
 
-SOURCES =   main.c \
-			memory.c \
-			stats.c \
-			data.c \
-			course1.c \
-			interrupts_msp432p401r_gcc.c \
-			startup_msp432p401r_gcc.c \
-			system_msp432p401r.c
+SOURCES =   ./src/main.c \
+			./src/memory.c \
+			./src/stats.c \
+			./src/data.c \
+			./src/course1.c \
+			./src/interrupts_msp432p401r_gcc.c \
+			./src/startup_msp432p401r_gcc.c \
+			./src/system_msp432p401r.c
 
 INCLUDES =  -I./include/CMSIS/ \
 			-I./include/common/ \

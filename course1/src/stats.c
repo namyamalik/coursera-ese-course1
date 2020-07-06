@@ -23,7 +23,7 @@
 /* Size of the Data Set */
 #define SIZE (40)
 
-int main() {
+int test_run() {
 
 	// sample array for testing
 	unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
@@ -54,11 +54,11 @@ void print_statistics(unsigned char* data_array, unsigned int array_size) {
 // print out array elements if the VERBOSE flag is enabled in makefile
 void print_array(unsigned char* data_array, unsigned int array_size) {
   	#ifdef VERBOSE	
-		printf("\nPrinting array: [ ");
+		PRINTF("   Printing array: [ ");
   		for (int i = 0; i < array_size; i++) {
-    		printf("%d ", data_array[i]);
+    		PRINTF("%d ", data_array[i]);
   		}
-  		printf("]\n");
+  		PRINTF("]\n");
 	#endif
 }
 
