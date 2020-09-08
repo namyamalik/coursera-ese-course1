@@ -1,5 +1,4 @@
 ## Author: Namya Malik  
-## ECE Specialization, Course 1  
 ## June 2020
 
 This is my submission for the weekly asssignments for the *Introduction to Embedded Systems Software and Development* course on Coursera. This course is the first course in the *Embedded Software Essentials Specialization* series.
